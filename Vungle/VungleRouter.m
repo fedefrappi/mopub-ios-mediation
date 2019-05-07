@@ -86,6 +86,7 @@ typedef NS_ENUM(NSUInteger, SDKInitializeState) {
         NSError * error = nil;
         [[VungleSDK sharedSDK] startWithAppId:appId error:&error];
         [[VungleSDK sharedSDK] setDelegate:self];
+        [VungleSDK sharedSDK].muted = YES;
     });
 }
 
